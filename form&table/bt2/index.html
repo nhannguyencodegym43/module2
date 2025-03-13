@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobbies form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .hobbies {
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            background-color: coral;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="hobbies">
+    <h1>SỞ THÍCH CỦA BẠN</h1>
+    <form action="#">
+        <label for="name">Họ và tên: <input type="text" name="name" id="name"></label>
+        <label for="email">Email: <input type="email" name="email" id="email"></label>
+        <label>Sở thích:
+            <input type="checkbox" name="hobbies" value="sport">Thể thao
+            <input type="checkbox" name="hobbies" value="music">Âm nhạc
+            <input type="checkbox" name="hobbies" value="read">Đọc sách
+            <input type="checkbox" name="hobbies" value="web">Lướt web
+            <input type="checkbox" name="hobbies" value="game">Chơi game
+            <input type="checkbox" name="hobbies" value="movie">Xem phim
+            <input type="checkbox" name="hobbies" value="travel">Du lịch
+        </label>
+        <button type="submit">Gửi thông tin</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</div>
+</body>
+</html>

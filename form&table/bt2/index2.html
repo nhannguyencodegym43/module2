@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learner form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1{
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            margin: 0;
+      }
+        form{
+            width: 300px;
+            margin: 0 auto;
+        }
+        label{
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select{
+            width: 100%;
+            padding: 5px;
+        }
+        button{
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+  <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+  <form action="#">
+    <label for="name">Họ và tên: <input type="text" name="name" id="name" size="15"></label>
+    <label for="dob">Ngày sinh: <input type="date" name="dob" id="dob"></label>
+    <label class="gender">Giới tính:</label> <br>
+    <input type="radio" name="gender" value="male" style="width: unset" checked>Nam
+    <input type="radio" name="gender" value="female" style="width: unset">Nữ <br>
+    <label for="address">Địa chỉ: <textarea name="address" id="address" cols="5" rows="3"></textarea></label>
+    <select name="class" id="class">
+        <option value="C00">- Chọn lớp -</option>
+        <option value="C01">Lớp C01</option>
+        <option value="C02">Lớp C02</option>
+        <option value="C03">Lớp C03</option>
+        <option value="C04">Lớp C04</option>
+        <option value="C05">Lớp C05</option>
+    </select>
+    <label for="email">Email: <input type="email" name="email" id="email"></label>
+    <label for="phone">Số điện thoại: <input type="tel" name="phone" id="phone"></label>
+    <button type="submit">Đăng ký</button>
+    <button type="reset">Nhập lại</button>
+  </form>
+</body>
+</html>
