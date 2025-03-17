@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using variables</title>
+</head>
+<body>
+<script>
+    // Khai báo biến
+    let i = 10;
+    let f = 20.5;
+    let b = true;
+    let s = "Hà Nội";
+    document.write('i = ' + i);
+    document.write('<br/>');
+    document.write('f = ' + f);
+    document.write('<br/>');
+    document.write('b = ' + b);
+    document.write('<br/>');
+    document.write('s = ' + s);
+
+    // Diện tích hình chữ nhật
+    let width = 20;
+    let height = 10;
+    let area = width * height;
+    document.write('<br/>');
+    document.write('Diện tích hình chữ nhật là: ' + area);
+
+    // Kiểm tra bội số
+    let num1 = prompt('Nhập số thứ nhất: ');
+    let num2 = prompt('Nhập số thứ hai: ');
+    let result = num1 % num2;
+    if (result === 0) {
+        document.write('<br/>');
+        document.write(num1 + ' là bội số của ' + num2);
+    } else {
+        document.write('<br/>');
+        document.write(num1 + ' không phải là bội số của ' + num2);
+    }
+</script>
+</body>
+</html>
