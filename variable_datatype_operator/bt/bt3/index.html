@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form action="#">
+  <input type="number" id="number1" name="number1" placeholder="Enter number 1">
+  <input type="number" id="number2" name="number2" placeholder="Enter number 2">
+  <button value="button" onclick="add()">Addition(+)</button>
+  <button value="button" onclick="subt()">Subtraction(-)</button>
+    <button value="button" onclick="multi()">Multiplication(*)</button>
+    <button value="button" onclick="divi()">Division(/)</button>
+</form>
+<script>
+    function add() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        alert('Addition: ' + (num1 + num2));
+    }
+    function subt() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        alert('Subtraction: ' + (num1 - num2));
+    }
+    function multi() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        alert('Multiplication: ' + (num1 * num2));
+    }
+    function divi() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        alert('Division: ' + (num1 / num2));
+    }
+</script>
+</body>
+</html>

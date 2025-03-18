@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+</head>
+<body>
+<script>
+    // Điểm trung bình Lý, Hóa, Sinh
+    let phy = parseInt(prompt("Enter the mark of Physics: "));
+    let chem = parseInt(prompt("Enter the mark of Chemistry: "));
+    let bio = parseInt(prompt("Enter the mark of Biology: "));
+    let avr = (phy + chem + bio) / 3;
+    document.write("The average mark of Physics, Chemistry and Biology is: " + avr);
+
+    // Chuyển từ Celsius sang Fahrenheit
+    let celsius = prompt("Enter the temperature in Celsius: ");
+    let fahrenheit = celsius * 9 / 5 + 32;
+    document.write("<br>The temperature in Fahrenheit is: " + fahrenheit);
+
+    // Tính diện tích hình tròn
+    let radius = prompt("Enter the radius of the circle: ");
+    let area = Math.PI * radius * radius;
+    document.write("<br>The area of the circle is: " + area);
+
+    // Tính chu vi hình tròn
+    let perimeter = 2 * Math.PI * radius;
+    document.write("<br>The perimeter of the circle is: " + perimeter);
+</script>
+</body>
+</html>
