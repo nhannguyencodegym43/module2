@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .options {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .but1 {
+            background-color: #4CAF50;
+        }
+        .but1:hover {
+            background-color: #45a049;
+        }
+        .but2 {
+            background-color: #f44336;
+        }
+        .but2:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<div class="options">
+<button class="but1" onclick="yes()" id="yes_but">Yes</button>
+<button class="but2" onmouseover="no()" id="no_but">No</button>
+</div>
+<script>
+    function yes() {
+        alert("I love you too!");
+    }
+    function no() {
+        document.getElementById("no_but").style.position = "relative";
+        document.getElementById("no_but").style.left = Math.random() * window.innerWidth + "px";
+        document.getElementById("no_but").style.top = Math.random() * window.innerHeight + "px";
+    }
+</script>
+</body>
+</html>

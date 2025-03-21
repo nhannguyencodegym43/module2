@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        div {
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div id="part1"><img src="pic1/row-1-column-1.jpg" height="200" width="600" onclick="changePic(event)"/></div>
+<div id="part2"><img src="pic1/row-2-column-1.jpg" height="200" width="600" onclick="changePic(event)"/></div>
+<div id="part3"><img src="pic1/row-3-column-1.jpg" height="200" width="600" onclick="changePic(event)"/></div>
+<div id="part4"><img src="pic1/row-4-column-1.jpg" height="200" width="600" onclick="changePic(event)"/></div>
+<div id="part5"><img src="pic1/row-5-column-1.jpg" height="200" width="600" onclick="changePic(event)"/></div>
+</div>
+<script>
+    function changePic(event) {
+        let img = event.target;
+        let src = img.src;
+        let parentDivId = img.parentElement.id;
+        let folder = src.match(/pic\d+/)[0];
+        let newFolder = folder === 'pic1' ? 'pic2' : folder === 'pic2' ? 'pic3' : 'pic1';
+
+        switch (parentDivId) {
+            case 'part1':
+                img.src = `${newFolder}/row-1-column-1.jpg`;
+                break;
+            case 'part2':
+                img.src = `${newFolder}/row-2-column-1.jpg`;
+                break;
+            case 'part3':
+                img.src = `${newFolder}/row-3-column-1.jpg`;
+                break;
+            case 'part4':
+                img.src = `${newFolder}/row-4-column-1.jpg`;
+                break;
+            case 'part5':
+                img.src = `${newFolder}/row-5-column-1.jpg`;
+                break;
+        }
+    }
+</script>
+</body>
+</html>

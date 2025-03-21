@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tien dien</title>
+</head>
+<body>
+<script>
+    let tieuThu = prompt('Nhap so dien da su dung');
+    let tien = 0;
+    if (tieuThu <= 50) {
+        tien = tieuThu * 1893;
+    } else if (tieuThu <= 100) {
+        tien = 50 * 1893 + (tieuThu - 50) * 1956;
+    } else if (tieuThu <= 200) {
+        tien = 50 * 1893 + 50 * 1956 + (tieuThu - 100) * 2271;
+    } else if (tieuThu <= 300) {
+        tien = 50 * 1893 + 50 * 1956 + 100 * 2271 + (tieuThu - 200) * 2860;
+    }
+    alert('So tien dien phai tra la: ' + tien);
+</script>
+</body>
+</html>
