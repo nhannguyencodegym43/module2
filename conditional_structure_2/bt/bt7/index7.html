@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition 7</title>
+</head>
+<body>
+<script>
+    let thuebao = prompt("Bạn dùng loại thuê bao gì?");
+    let tiencuoc = 0;
+    switch (thuebao) {
+        case "Trả trước":
+            const cuoc_phut_noi = 1180;
+            const cuoc_phut_ngoai = 1390;
+            const cuoc_tin_noi = 290;
+            const cuoc_tin_ngoai = 350;
+            const cuoc_net = 500;
+            let sophut_noi1 = +prompt("Bạn dùng bao nhiêu phút nội mạng?");
+            let sophut_ngoai1 = +prompt("Bạn dùng bao nhiêu phút ngoại mạng?");
+            let sotin_noi = +prompt("Bạn dùng bao nhiêu tin nội mạng?");
+            let sotin_ngoai = +prompt("Bạn dùng bao nhiêu tin ngoại mạng?");
+            let sonet = +prompt("Bạn dùng bao nhiêu MB?");
+            tiencuoc = cuoc_phut_noi * sophut_noi1 + cuoc_phut_ngoai * sophut_ngoai1 + cuoc_tin_noi * sotin_noi + cuoc_tin_ngoai * sotin_ngoai + cuoc_net * sonet;
+            alert("Tiền cước của bạn là: " + tiencuoc);
+            break;
+        case "Trả sau":
+            const cuoc_phut_phat_sinh_noi = 990;
+            const cuoc_phut_phat_sinh_ngoai = 1190;
+            const cuoc_tin_phat_sinh = 200;
+            let cuoc_co_dinh = +prompt("Bạn dùng loại cước cố định bao nhiêu tiền?");
+            let phut_uu_dai_noi = +prompt("Bạn có bao nhiêu phút nội mang ưu đãi?");
+            let phut_uu_dai_ngoai = +prompt("Bạn có bao nhiêu phút ngoại mạng ưu đãi?");
+
+            // User input
+            let sophut_noi = +prompt("Bạn dùng bao nhiêu phút nội mạng?");
+            let sophut_ngoai = +prompt("Bạn dùng bao nhiêu phút ngoại mạng?");
+            let sotin_sau = +prompt("Bạn dùng bao nhiêu tin?");
+            if (sophut_noi > phut_uu_dai_noi) {
+                tiencuoc = cuoc_co_dinh + (sophut_noi - phut_uu_dai_noi) * cuoc_phut_phat_sinh_noi + sotin_sau * cuoc_tin_phat_sinh;
+            }
+            if (sophut_ngoai > phut_uu_dai_ngoai) {
+                tiencuoc = cuoc_co_dinh + (sophut_ngoai - phut_uu_dai_ngoai) * cuoc_phut_phat_sinh_ngoai + sotin_sau * cuoc_tin_phat_sinh;
+            }
+            if (sophut_noi > phut_uu_dai_noi && sophut_ngoai > phut_uu_dai_ngoai) {
+                tiencuoc = cuoc_co_dinh + (sophut_noi - phut_uu_dai_noi) * cuoc_phut_phat_sinh_noi + (sophut_ngoai - phut_uu_dai_ngoai) * cuoc_phut_phat_sinh_ngoai + sotin_sau * cuoc_tin_phat_sinh;
+            }
+            alert("Tiền cước của bạn là: " + tiencuoc);
+            break;
+        default: alert("Bạn nhập sai loại thuê bao");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition 6</title>
+</head>
+<body>
+<script>
+    let doanhSo = +prompt('Nhập doanh số: ');
+    const hoaHong1 = 0.03;
+    const hoaHong2 = 0.03;
+    const hoaHong3 = 0.1;
+    let tienHoahong = 0;
+    if (doanhSo <= 50000000) {
+        tienHoahong = doanhSo * hoaHong1;
+    } else if (doanhSo <= 100000000) {
+        tienHoahong = 50000000 * hoaHong1 + (doanhSo - 50000000) * hoaHong2;
+    } else {
+        tienHoahong = 50000000 * hoaHong1 + 50000000 * hoaHong2 + (doanhSo - 100000000) * hoaHong3;
+    }
+    alert('Tiền hoa hồng: ' + tienHoahong);
+</script>
+</body>
+</html>

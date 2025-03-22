@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition 5</title>
+</head>
+<body>
+<script>
+    let kiemtra = +prompt("Nhập số điểm bài kiểm tra thường xuyên: ");
+    let giuaky = +prompt("Nhập số điểm bài kiểm tra giữa kỳ: ");
+    let cuoiky = +prompt("Nhập số điểm bài kiểm tra cuối kỳ: ");
+    const hesoKT = 1;
+    const hesoGK = 2;
+    const hesoCK = 3;
+    const tongheso = hesoKT + hesoGK + hesoCK;
+    const diemtb = (kiemtra * hesoKT + giuaky * hesoGK + cuoiky * hesoCK) / tongheso;
+    let result = (diemtb >= 8) ? "Học sinh giỏi" : (diemtb >= 6.5) ? "Học sinh khá" : (diemtb >= 5) ? "Học sinh trung bình" : "Học sinh yếu";
+    alert("Điểm trung bình của học sinh là: " + diemtb.toFixed(2) + "\nXếp loại học lực: " + result);
+</script>
+</body>
+</html>
