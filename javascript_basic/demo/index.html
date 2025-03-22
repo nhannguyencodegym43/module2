@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
 </head>
 <body>
-$END$
+<form action="#">
+    <label for="name">Họ và tên:</label> <br>
+    <input type="text" id="name"> <br>
+    <label for="email">Email:</label> <br>
+    <input type="email" id="email"> <br>
+    <label for="phone">Số điện thoại:</label> <br>
+    <input type="number" id="phone"> <br>
+    <label>Giới tính:</label> <br>
+    <input type="radio" name="gender" value="Nam">Nam
+    <input type="radio" name="gender" value="Nữ">Nữ <br>
+    <button onclick="getData()" value="submit">Đăng ký</button>
+</form>
+<script>
+    function getData() {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        alert('Họ và tên: ' + name + '\nEmail: ' + email + '\nSố điện thoại: ' + phone + '\nGiới tính: ' + gender);
+    }
+</script>
 </body>
 </html>
