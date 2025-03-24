@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ax^2 + bx + c = 0</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Enter the first num");
+    let b = +prompt("Enter the second num");
+    let c = +prompt("Enter the third num");
+    let delta = b * b - 4 * a * c;
+    let x;
+    if (a === 0) {
+        if (b === 0) {
+            if (c === 0) {
+                alert("Phuong trinh vo so nghiem");
+            } else {
+                alert("Phuong trinh vo nghiem");
+            }
+        } else {
+            x = -c / b;
+            alert("Phuong trinh co nghiem duy nhat x = " + x);
+        }
+    } else {
+        if (delta < 0) {
+            alert("Phuong trinh vo nghiem");
+        } else if (delta === 0) {
+            x = -b / (2 * a);
+            alert("Phuong trinh co nghiem kep x = " + x);
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert("Phuong trinh co 2 nghiem phan biet x1 = " + x1 + " va x2 = " + x2);
+        }
+    }
+</script>
+</body>
+</html>

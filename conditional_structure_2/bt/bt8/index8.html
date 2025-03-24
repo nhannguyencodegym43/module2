@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You're a human?</title>
+</head>
+<body>
+<script>
+  let age = parseInt(prompt("Enter your age"));
+  let result = "";
+  if (age < 120 && age > 0) {
+    result = "You're a human";
+  } else if (age > 120) {
+    result = "You're AI";
+  } else if (age < 0) {
+    result = "You're not born yet";
+  } else {
+    result = "Invalid age";
+  }
+  alert(result);
+</script>
+</body>
+</html>

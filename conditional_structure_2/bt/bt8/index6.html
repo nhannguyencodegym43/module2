@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ax + b = 0</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Enter the first num");
+    let b = +prompt("Enter the second num");
+    let x;
+    if (a === 0) {
+        if (b === 0) {
+            x = "The equation has countless solutions";
+        } else {
+            x = "The equation has no solution";
+        }
+    } else {
+        x = -b / a;
+    }
+    alert(x);
+</script>
+</body>
+</html>

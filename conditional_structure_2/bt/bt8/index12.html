@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send money to the bank</title>
+</head>
+<body>
+<script>
+    let p = +prompt("Nhập số tiền bạn có: ");
+    let r = +prompt("Nhập lãi suất hàng năm: ");
+    let n = +prompt("Nhập số lần cộng lãi trong 1 năm: ");
+    let t = +prompt('Nhập số năm bạn muốn gửi: ');
+    let m = p * (1 + r / 100 / n) ** (n * t);
+    alert(m.toFixed(2));
+</script>
+</body>
+</html>

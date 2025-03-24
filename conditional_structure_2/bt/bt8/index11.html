@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Tax</title>
+</head>
+<body>
+<script>
+    let salary = +prompt('Enter your salary: ');
+    let personalDeduction = prompt('Enter your personal deduction: ');
+    let familyDeduction = prompt('How many kids do you have? ');
+    // muc thu nhap
+    const muc1 = 5000000;
+    const muc2 = 10000000;
+    const muc3 = 18000000;
+    const muc4 = 32000000;
+    const muc5 = 52000000;
+    const muc6 = 80000000;
+    // thue suat
+    const suatMuc1 = 0.05;
+    const suatMuc2 = 0.1;
+    const suatMuc3 = 0.15;
+    const suatMuc4 = 0.2;
+    const suatMuc5 = 0.25;
+    const suatMuc6 = 0.3;
+    const suatMuc7 = 0.35;
+    // giam tru
+    if (personalDeduction === 'yes') {
+        salary -= 11000000;
+    }
+    if (familyDeduction > 0) {
+        salary -= familyDeduction * 4400000;
+    }
+    if (salary < 0) {
+        salary = "Không phải nộp thuế";
+    }
+    let tax;
+    if (salary <= muc1) {
+        tax = salary * suatMuc1;
+    } else if (salary <= muc2) {
+        tax = muc1 * suatMuc1 + (salary - muc1) * suatMuc2;
+    } else if (salary <= muc3) {
+        tax = muc1 * suatMuc1 + (muc2 - muc1) * suatMuc2 + (salary - muc2) * suatMuc3;
+    } else if (salary <= muc4) {
+        tax = muc1 * suatMuc1 + (muc2 - muc1) * suatMuc2 + (muc3 - muc2) * suatMuc3 + (salary - muc3) * suatMuc4;
+    } else if (salary <= muc5) {
+        tax = muc1 * suatMuc1 + (muc2 - muc1) * suatMuc2 + (muc3 - muc2) * suatMuc3 + (muc4 - muc3) * suatMuc4 + (salary - muc4) * suatMuc5;
+    } else if (salary <= muc6) {
+        tax = muc1 * suatMuc1 + (muc2 - muc1) * suatMuc2 + (muc3 - muc2) * suatMuc3 + (muc4 - muc3) * suatMuc4 + (muc5 - muc4) * suatMuc5 + (salary - muc5) * suatMuc6;
+    } else {
+        tax = muc1 * suatMuc1 + (muc2 - muc1) * suatMuc2 + (muc3 - muc2) * suatMuc3 + (muc4 - muc3) * suatMuc4 + (muc5 - muc4) * suatMuc5 + (muc6 - muc5) * suatMuc6 + (salary - muc6) * suatMuc7;
+    }
+    document.write('Thuế thu nhập cá nhân của bạn là: ' + tax);
+</script>
+</body>
+</html>
