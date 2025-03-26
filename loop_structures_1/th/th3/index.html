@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
+    let value = null;
     do {
-        let num = +prompt('Enter numbers from 1 to 10');
-    } while (num < 1 || num > 10);
-    document.write(num);
+        value = prompt("Nhập vào số từ 1 -> 10");
+    } while (value < 1 || value > 10);
+    alert("Số bạn vừa nhập là " + value);
 </script>
 </body>
 </html>
