@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First fibonacci numbers divisible by 5</title>
+</head>
+<body>
+<script>
+    let fi1 = 0, fi2 = 1;
+    if (fi1 % 5 === 0) {
+        document.write("Số fibonacci đầu tiên chia hết cho 5 là " + fi1 + "<br>");
+    } else if (fi2 % 5 === 0) {
+        document.write("Số fibonacci đầu tiên chia hết cho 5 là " + fi2 + "<br>");
+    } else {
+    while (true) {
+        let newFi = fi1 + fi2;
+        if (newFi % 5 === 0) {
+            document.write("Số fibonacci chia hết cho 5 là " + newFi + "<br>");
+            break;
+        }
+        fi1 = fi2;
+        fi2 = newFi;
+    }
+    }
+</script>
+</body>
+</html>

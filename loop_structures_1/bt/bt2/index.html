@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First 20 prime numbers</title>
+</head>
+<body>
+<script>
+    // for (let i = 2; i <= 100; i++) {
+    //     let result1 = false;
+    //     let j = 2;
+    //     while (j<=i) {
+    //         if (j !== i && i % j === 0) {
+    //             result1 = true;
+    //             break;
+    //         }
+    //         j++;
+    //     }
+    //     if (result1 === false) {
+    //         document.write("Số " + i + " là một số nguyên tố!" + "<br>");
+    //     } else {
+    //         document.write("Số " + i + " không là một số nguyên tố!" + "<br>");
+    //     }
+    // }
+    let i = 2;
+    let count = 0;
+    while (i <= 100) {
+        let result1 = false;
+        let j = 2;
+        while (j<=i) {
+            if (j !== i && i % j === 0) {
+                result1 = true;
+                break;
+            }
+            j++;
+        }
+        if (result1 === false) {
+            document.write("Số " + i + " là một số nguyên tố!" + "<br>");
+            count++;
+        }
+        if (count === 20) {
+            break;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>

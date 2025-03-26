@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Play</button>
+<script>
+    let user, bot, result;
+    let count = 0;
+    function play() {
+        do {
+            user = +prompt("Enter a number from 1 to 99");
+            bot = Math.floor(Math.random() * 99) + 1;
+        } while (user < 0 || user > 100);
+        if (user === bot) {
+            result = "Both are equal!";
+        } else {
+            do {
+                count++;
+                if (count === 4){
+                    result = "Try again!";
+                    break;
+                }
+                user = +prompt("Enter again");
+                if (user > bot) {
+                    alert("Decrease!");
+                } else if (user < bot) {
+                    alert("Increase!");
+                } else if (user === bot) {
+                    result = "Both are equal!";
+                }
+            } while (user !== bot);
+        }
+        document.write(result + "<br>");
+        document.write("Số của máy là " + bot + "<br>");
+        document.write("Số bạn nhập là " + user);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First 20 fibonacci numbers</title>
+</head>
+<body>
+<script>
+    //My code
+    // const fi1 = 0;
+    // const fi2 = 1;
+    // const fi3 = fi1 + fi2;
+    // const fi4 = fi2 + fi3;
+    // let newFi;
+    // let beforeFi1 = fi4;
+    // let beforeFi2 = fi3;
+    // let i = 5;
+    // let count = 4;
+    // document.write("Số fibonacci thứ 1 là " + fi1 + "<br>");
+    // document.write("Số fibonacci thứ 2 là " + fi2 + "<br>");
+    // document.write("Số fibonacci thứ 3 là " + fi3 + "<br>");
+    // document.write("Số fibonacci thứ 4 là " + fi4 + "<br>");
+    // while (i <= 100) {
+    //     newFi = beforeFi1 + beforeFi2;
+    //     document.write("Số fibonacci thứ " + i + " là " + newFi + "<br>")
+    //     beforeFi2 = beforeFi1;
+    //     beforeFi1 = newFi;
+    //     count++;
+    //     if (count === 20) {
+    //         break;
+    //     }
+    //     i++;
+    // }
+
+    //AI's code
+    let fi1 = 0, fi2 = 1;
+    document.write("Số fibonacci thứ 1 là " + fi1 + "<br>");
+    document.write("Số fibonacci thứ 2 là " + fi2 + "<br>");
+    for (let i = 3; i <= 20; i++) {
+        let newFi = fi1 + fi2;
+        document.write("Số fibonacci thứ " + i + " là " + newFi + "<br>");
+        fi1 = fi2;
+        fi2 = newFi;
+    }
+</script>
+</body>
+</html>
