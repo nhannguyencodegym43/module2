@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shapes by *</title>
+</head>
+<body>
+<button onclick="triangle1()">Triangle 1</button>
+<button onclick="triangle2()">Triangle 2</button>
+<button onclick="triangle3()">Triangle 3</button>
+<button onclick="triangle4()">Triangle 4</button>
+<p id="tri3"></p>
+<script>
+    function triangle1() {
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    }
+
+    function triangle2() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 5; j >= i; j--) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+    function triangle3() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>

@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-  let sout = "<table border='1' width='500' cellspacing='1' cellpadding='5'>";
+  let multi = "<table border='1' width='700' cellspacing='1' cellpadding='5'>";
   for (let i = 1; i <= 9; i++) {
-    sout += "<tr>";
+    multi += "<tr>";
     for (let j = 2; j <= 9; j++) {
-      sout += "<td>" + j + "x" + i + "=" + j*i + "</td>"
+      multi += `<td>${j} x ${i} = ${j * i}</td>`;
     }
-    sout += "</tr>";
+    multi += "</tr>";
   }
-  sout += "</table>";
-  document.write(sout);
+  multi += "</table>";
+  document.write(multi);
 </script>
 </body>
 </html>
