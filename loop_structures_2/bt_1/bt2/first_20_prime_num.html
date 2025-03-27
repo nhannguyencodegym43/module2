@@ -6,42 +6,24 @@
 </head>
 <body>
 <script>
-    // for (let i = 2; i <= 100; i++) {
-    //     let result1 = false;
-    //     let j = 2;
-    //     while (j<=i) {
-    //         if (j !== i && i % j === 0) {
-    //             result1 = true;
-    //             break;
-    //         }
-    //         j++;
-    //     }
-    //     if (result1 === false) {
-    //         document.write("Số " + i + " là một số nguyên tố!" + "<br>");
-    //     } else {
-    //         document.write("Số " + i + " không là một số nguyên tố!" + "<br>");
-    //     }
-    // }
-    let i = 2;
-    let count = 0;
-    while (i <= 100) {
-        let result1 = false;
-        let j = 2;
-        while (j<=i) {
-            if (j !== i && i % j === 0) {
-                result1 = true;
-                break;
+    let n;
+    function checkPrime() {
+        if (n <= 1) return false;
+        for (let i = 2; i<= Math.sqrt(n); i++) { //Nếu một số n không phải là số nguyên tố, nó sẽ có ít nhất một ước số nhỏ hơn hoặc bằng √n.
+            if (n % i === 0) {                   //Nên suy ra nếu kiểm tra từ khoảng 2 đến căn bậc 2 của n mà không có ước nào thì n là số nguyên tố
+                return false;
             }
-            j++;
         }
-        if (result1 === false) {
-            document.write("Số " + i + " là một số nguyên tố!" + "<br>");
+        return true;
+    }
+    let count = 0;
+    let start = 2;
+    while (count < 20) {
+        if (checkPrime(start)) {
+            document.write(`${start} <br>`);
             count++;
         }
-        if (count === 20) {
-            break;
-        }
-        i++;
+        start++;
     }
 </script>
 </body>

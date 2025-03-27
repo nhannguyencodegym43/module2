@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First five even numbers</title>
+    <title>First five even numbers start by 5</title>
 </head>
 <body>
 <script>
     let count = 0;
-    for (let i = 5; i <= 20; i++) {
-        if (i % 2 === 0) {
-            document.write(i + "<br>");
+    let start = 5;
+    while (count <= 4) {
+        if (start % 2 === 0) {
+            document.write(start + "<br>");
             count++;
         }
-        if (count === 5) {
-            break;
-        }
+        start++;
     }
 </script>
 </body>
