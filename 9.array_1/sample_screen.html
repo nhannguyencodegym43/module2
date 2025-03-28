@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Screen</title>
+</head>
+<body>
+<h2>Sample Screen:</h2>
+<form>
+    <input type="text" id="myInput">
+    <input type="button" value="Add" onclick="addElement()">
+    <input type="button" value="Display" onclick="displayElement()">
+<!--    <div id="result"></div>-->
+</form>
+<script>
+    // let x = 0;
+    let textArray = [];
+    function addElement() {
+        textArray.push(document.getElementById("myInput").value);
+    }
+    function displayElement() {
+        for (let i = 0; i < textArray.length; i++) {
+            document.write(textArray[i] + "<br>");
+        }
+    }
+
+    // textArray[x] = document.getElementById("myInput").value;
+    // alert("Element: " + textArray[x] + " Added at index " + x);
+    // x++;
+    // document.getElementById("myInput").value = "";
+
+    // let e = "<hr/>";
+    // for (let i = 0; i < textArray.length; i++) {
+    //     e += "Element " + i + " = " + textArray[i] + "<br/>";
+    // }
+    // document.getElementById("result").innerHTML = e;
+</script>
+</body>
+</html>
