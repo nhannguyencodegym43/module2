@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In that array?</title>
+</head>
+<body>
+<script>
+  let array = [1, 2, 3, 4, 5];
+  let key = +prompt("Nhập số để tìm");
+  let found = false;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === key) {
+      found = true;
+      break;
+    }
+  }
+    if (found) {
+        alert("Có số " + key + " trong mảng");
+    } else {
+        alert("Không có số " + key + " trong mảng");
+    }
+</script>
+</body>
+</html>
