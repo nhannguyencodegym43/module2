@@ -8,6 +8,7 @@
 <script>
   let array = [1, 2, 3, 4, 5];
   let key = +prompt("Nhập số để tìm");
+  let position = array.indexOf(key);
   let found = false;
   for (let i = 0; i < array.length; i++) {
     if (array[i] === key) {
@@ -16,7 +17,7 @@
     }
   }
     if (found) {
-        alert("Có số " + key + " trong mảng");
+        alert("Có số " + key + " trong mảng. Vị trí là " + position);
     } else {
         alert("Không có số " + key + " trong mảng");
     }

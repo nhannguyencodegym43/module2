@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Even indexes in an array</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            document.write(arr[i]);
+        }
+    }
+</script>
 </body>
 </html>
