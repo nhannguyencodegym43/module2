@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check chars in the array</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let a = prompt('Nhập vào một ký tự');
+    let arr = prompt('Nhập vào một dãy ký tự');
+    alert(checkCharInArray(arr));
+    function checkCharInArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (a === arr[i]) {
+                count++;
+            }
+        }
+        if (count) {
+            result = `Ky tu ${a} xuat hien ${count} lan trong ${arr}`
+        } else {
+            result = -1;
+        }
+        return result;
+    }
+</script>
+</body>
+</html>

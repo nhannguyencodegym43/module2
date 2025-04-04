@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check if number</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào ký tự a");
+    checkNumber(a);
+    function checkNumber(a) {
+        return !isNaN(a);
+    }
+    if (checkNumber(a)) {
+        result = `${a} là một number`
+        alert(result);
+    } else {
+        result = `${a} không phải là một number`
+        alert(result);
+    }
+</script>
+</body>
+</html>

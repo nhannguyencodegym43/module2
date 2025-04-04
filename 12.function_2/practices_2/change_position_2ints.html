@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change position of 2 integers</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập vào số a");
+    let b = +prompt("Nhập vào số b");
+    alert(`Vị trí đầu tiên là ${a} trước ${b} sau`)
+    alert(changePosition(a,b));
+    function changePosition(a,b) {
+        let temp;
+        temp = a;
+        a = b;
+        b = temp;
+        result = `Vị trí sau đó là ${a} trước ${b} sau`;
+        return result;
+    }
+</script>
+</body>
+</html>

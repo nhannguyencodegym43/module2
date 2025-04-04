@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích and Chu vi hình tròn</title>
+</head>
+<body>
+<script>
+  function hinhTron(bankinh) {
+    let dientich = (bankinh * bankinh * Math.PI).toFixed(2);
+    let chuvi = (2 * Math.PI * bankinh).toFixed(2);
+    let result = `Diện tích của hình tròn là ${dientich} và Chu vi của hình tròn là ${chuvi}`;
+    return result;
+  }
+  let bankinh = +prompt("Nhập vào bán kính hình tròn");
+  alert(hinhTron(bankinh));
+</script>
+</body>
+</html>

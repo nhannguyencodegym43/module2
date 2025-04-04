@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max của mảng</title>
+</head>
+<body>
+<script>
+    let array = [1, 5, 6, 7, 2];
+    let result = maxArray(array);
+    document.write("Giá trị lớn nhất là: " + result);
+    function maxArray(arr) {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+    let sum = add(2, 3);
+    document.write("<br>");
+    console.log(sum);
+</script>
+</body>
+</html>

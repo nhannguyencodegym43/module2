@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet and meters</title>
+</head>
+<body>
+<h1>Feets to Meters</h1>
+<p>Feets: <input type="number" oninput="feettoMeter(this.value)" onchange="feettoMeter(this.value)"></p>
+<p>Meters: <span id="result"></span></p>
+
+<h1>Meters to Feets</h1>
+<p>Meters: <input type="number" oninput="meterstoFeets(this.value)" onchange="meterstoFeets(this.value)"></p>
+<p>Feets: <span id="result2"></span></p>
+<script>
+    function feettoMeter(valfeet) {
+        valfeet = parseFloat(valfeet);
+        valmeters = valfeet * 0.305;
+        document.getElementById("result").innerHTML = valmeters + " meters";
+    }
+
+    function meterstoFeets(valmet2) {
+        valmet2 = parseFloat(valmet2);
+        valfeet2 = valmet2 * 3.279;
+        document.getElementById("result2").innerHTML = valfeet2 + " feets";
+    }
+</script>
+</body>
+</html>

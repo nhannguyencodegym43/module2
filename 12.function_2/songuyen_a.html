@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(a) {
+        if (a <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i === 0) return false;
+        }
+        return true;
+    }
+
+    let a = +prompt("Nhập số a:");
+    let result = isPrime(a);
+    if (result) {
+        document.write(a + " là số nguyên tố");
+    } else {
+        document.write(a + " không phải là số nguyên tố");
+    }
+</script>
+</body>
+</html>

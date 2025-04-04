@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min of 3 integers</title>
+</head>
+<body>
+<script>
+    function min3Ints(a,b,c) {
+        let array = [a, b, c];
+        let min = a;
+        let result = `${a} là số nguyên nhỏ nhất`;
+        for (let i = 1; i <= 2; i++) {
+            if (min > array[i]) {
+                min = array[i];
+                result = `${array[i]} là số nguyên nhỏ nhất`;
+            }
+        }
+        return result;
+    }
+    let a = parseInt(prompt("Nhập số a"));
+    let b = parseInt(prompt("Nhập số b"));
+    let c = parseInt(prompt("Nhập số b"));
+    alert(min3Ints(a,b,c));
+</script>
+</body>
+</html>

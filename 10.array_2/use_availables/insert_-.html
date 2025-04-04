@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert -</title>
+</head>
+<body>
+<script>
+    let dodai = +prompt("Nhập vào độ dài của mảng");
+    let chuoiSo = [];
+    for (let i = 0; i < dodai; i++) {
+        let item = +prompt("Nhập vào các số trong mảng");
+        chuoiSo.push(item);
+    }
+    for (let i = 0; i < chuoiSo.length; i++) {
+        if (chuoiSo[i] !== 0) {
+            if ((chuoiSo[i] % 2 === 0) && (chuoiSo[i + 1] % 2 === 0)) {
+                chuoiSo[i] += "-";
+            }
+        }
+    }
+    let chuoiSo2 = chuoiSo.join("");
+    document.write(chuoiSo2);
+</script>
+</body>
+</html>

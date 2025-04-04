@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lower to UPPER</title>
+</head>
+<body>
+<script>
+  let chuoi = prompt("Nhập vào 1 chuỗi");
+  const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lower = "abcdefghijklmnopqrstuvwxyz";
+  let chuoiMoi = [];
+  for (let i = 0; i < chuoi.length; i++) {
+    if (UPPER.indexOf(chuoi[i]) !== -1) {
+      chuoiMoi.push(chuoi[i].toLowerCase());
+    } else if (lower.indexOf(chuoi[i]) !== -1) {
+      chuoiMoi.push(chuoi[i].toUpperCase());
+    } else {
+      chuoiMoi.push(chuoi[i]);
+    }
+  }
+  document.write(chuoiMoi.join(""));
+</script>
+</body>
+</html>

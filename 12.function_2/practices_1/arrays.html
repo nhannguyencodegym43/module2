@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script>
+  let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  let array2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  function findStar(star) {
+    let result = "Enter the name of the star again";
+    for (let i = 0; i < array1.length; i++) {
+      if (star === array1[i]) {
+       result = array2[i];
+       break;
+      }
+    }
+    return result;
+  }
+  let star = prompt("Enter the name of the star");
+  alert(findStar(star));
+
+</script>
+</body>
+</html>

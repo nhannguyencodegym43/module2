@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(a) {
+        let giaithua = 1;
+        for (let i = 1; i <= a; giaithua *= i, i++) {}
+        let result = `Giai thừa của số nguyên ${a} là ${giaithua}`;
+        return result;
+    }
+    let a = parseInt(prompt("Nhập số nguyên a"));
+    alert(tinhGiaiThua(a));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and invoke</title>
+</head>
+<body>
+<button onclick="decision(check)">Check the result</button>
+<script>
+    let check = confirm("Are you sure?");
+    function decision() {
+        if (check) {
+            alert("You're done!");
+        } else {
+            alert("You're NOT done!");
+        }
+    }
+</script>
+</body>
+</html>
