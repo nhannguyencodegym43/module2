@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of cols and rows</title>
+</head>
+<body>
+<script>
+  let a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12],
+  ];
+  let sum_cols = 0;
+  let sum_rows = 0;
+  for (let j = 0; j < 3; j++) {
+      for (let i = 0; i < a.length; i++) {
+          sum_cols += a[i][j];
+      }
+      document.write(`Tổng cột thứ ${j} là ${sum_cols} <br>`)
+  }
+  for (let i = 0; i < a.length; i++) {
+      for (let j = 0; j < 3; j++) {
+          sum_rows += a[i][j];
+      }
+      document.write(`Tổng hàng thứ ${i} là ${sum_rows} <br>`)
+  }
+</script>
+</body>
+</html>

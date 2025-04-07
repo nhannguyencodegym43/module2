@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replace - by _</title>
+</head>
+<body>
+<script>
+    let length = 3;
+    let a = [];
+    for (let i = 0; i < length; i++) {
+        let soNguyen = prompt("Enter the items for a");
+        a.push(soNguyen);
+        if (soNguyen === '-') {
+            a[i] = '_';
+        }
+    }
+    alert(a);
+</script>
+</body>
+</html>

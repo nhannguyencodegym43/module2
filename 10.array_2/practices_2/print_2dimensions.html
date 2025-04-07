@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print 2 dimensions</title>
+</head>
+<body>
+<script>
+  let a = [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9],
+          [10, 11, 12],
+  ];
+  for (let i = 0; i < a.length; i++) {
+    document.write(`row ${i} <br>`);
+    for (let j = 0; j < 3; j++) {
+      document.write(` ${a[i][j]} <br>`);
+    }
+  }
+</script>
+</body>
+</html>

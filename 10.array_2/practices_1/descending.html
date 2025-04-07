@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Descending array</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 3; i++) {
+        let soNguyen = prompt("Enter the number");
+        arr.push(soNguyen);
+    }
+    arr.sort(function (a, b) {
+        return b - a;
+    });
+    alert(arr);
+</script>
+</body>
+</html>

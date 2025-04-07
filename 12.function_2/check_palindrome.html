@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check palindrome</title>
+</head>
+<body>
+<script>
+  // let doDaiChuoi = +prompt("Nhập vào độ dài của chuỗi");
+  // let arr = [];
+  // for (let i = 0; i < doDaiChuoi; i++) {
+  //   let kyTu = prompt("Nhập vào các ký tự trong chuỗi");
+  //   arr.push(kyTu);
+  // }
+  // alert(checkPalindrome(arr));
+  // function checkPalindrome(arr) {
+  //   while (arr[0] === arr[arr.length - 1]) {
+  //     arr.shift();
+  //     arr.pop();
+  //     if (arr.length === 0 || arr.length === 1) {
+  //       break;
+  //     }
+  //   }
+  //   return (arr.length === 0 || arr.length === 1);
+  // }
+
+  let chuoi = prompt("Nhập vào một chuỗi:");
+  if (chuoi.length <= 2) {
+    alert("Chuỗi quá ngắn để xóa!");
+  } else {
+    alert(checkPalindrome(chuoi));
+    function checkPalindrome(chuoi) {
+      while (chuoi[0] === chuoi[chuoi.length - 1]) {
+        chuoi.slice(1, -1);
+        if (chuoi.length === 0 || chuoi.length === 1) {
+          break;
+        }
+      }
+      return (chuoi.length === 0 || chuoi.length === 1);
+    }
+  }
+</script>
+</body>
+</html>

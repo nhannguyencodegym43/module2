@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect 2 arrays into c</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for (let i = 0; i < 3; i++) {
+        let soNguyen = prompt("Enter the number for a");
+        a.push(soNguyen);
+    }
+    let b = [];
+    for (let i = 0; i < 3; i++) {
+        let soNguyen = prompt("Enter the number for b");
+        b.push(soNguyen);
+    }
+    let c = a.concat(b);
+    alert(c);
+</script>
+</body>
+</html>

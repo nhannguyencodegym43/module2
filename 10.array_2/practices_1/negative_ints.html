@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count negative integers</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < 3; i++) {
+        let soNguyen = +prompt("Enter the number");
+        arr.push(soNguyen);
+        if (soNguyen < 0) {
+            count++;
+        }
+    }
+    alert(`Số nguyên âm trong mảng có ${count} số`);
+</script>
+</body>
+</html>

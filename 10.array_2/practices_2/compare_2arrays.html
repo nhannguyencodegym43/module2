@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare 2 arrays</title>
+</head>
+<body>
+<script>
+  let length = 3;
+  let a = [];
+  for (let i = 0; i < length; i++) {
+    let soNguyen = prompt("Enter the items for a");
+    a.push(soNguyen);
+  }
+  let b = [];
+  for (let i = 0; i < length; i++) {
+    let soNguyen = prompt("Enter the items for b");
+    b.push(soNguyen);
+  }
+  let count = 0;
+  for (let i = 0; i < length; i++) {
+    if (b[i] === a[i]) {
+      count++;
+    }
+  }
+  if (count === length) {
+    alert("Hai mảng giống nhau");
+  } else {
+    alert("Hai mảng không giống nhau");
+  }
+</script>
+</body>
+</html>

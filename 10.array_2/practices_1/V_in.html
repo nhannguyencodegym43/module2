@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check V in the array</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let checkV = false;
+    for (let i = 0; i < 3; i++) {
+        let soNguyen = prompt("Enter the number");
+        arr.push(soNguyen);
+        if (arr[i] === "v") {
+            arr.splice(i, 1);
+            checkV = true;
+        }
+    }
+    if (checkV) {
+        arr[arr.length - 1] = 0;
+    }
+    alert(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking typing area</title>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<textarea name="" id="message" cols="30" rows="10"></textarea>
+<script>
+    const message = document.getElementById('message');
+    const text = 'Chị Thi khùng :D';
+    let index = 0;
+
+    function type(event) {
+        event.preventDefault();
+        if (index < text.length) {
+            message.value += text[index];
+            index++;
+        } else {
+            message.value = '';
+            index = 0;
+        }
+    }
+
+    document.addEventListener('keydown', type);
+</script>
+</body>
+</html>

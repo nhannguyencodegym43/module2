@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count char of numbers</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  let count = 0;
+  for (let i = 0; i < 3; i++) {
+    let soNguyen = prompt("Enter the number");
+    arr.push(soNguyen);
+    for (let j = 0; j < numbers.length; j++) {
+      if (soNguyen === numbers[j]) {
+        count++;
+      }
+    }
+  }
+  alert(`Mảng nhập vào là ${arr}
+Độ dài của mảng là ${arr.length}
+Số ký tự số trong mảng là ${count}
+`);
+</script>
+</body>
+</html>

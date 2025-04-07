@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let eng = ["one", "two", "three", "four", "five"];
+    let vie = ["một", "hai", "ba", "bốn", "năm"];
+    let word = prompt("Enter word");
+    let result ='Can not find that word';
+    alert(translateViet(word));
+    function translateViet(word) {
+        for (let i = 0; i < eng.length; i++) {
+            if (word === eng[i]) {
+                result = `${word} means ${vie[i]}`;
+            }
+        }
+        return result;
+    }
+</script>
+</body>
+</html>

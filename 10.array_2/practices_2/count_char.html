@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count chars in array</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let count = 0;
+    for (let i = 0; i < 3; i++) {
+        let items = prompt("Enter the items");
+        arr.push(items);
+        for (let j = 0; j < characters.length; j++) {
+            if (items === characters[j]) {
+                count++;
+            }
+        }
+    }
+    alert(`Mảng nhập vào là ${arr}
+Độ dài của mảng là ${arr.length}
+Số ký tự trong mảng là ${count}
+`);
+</script>
+</body>
+</html>

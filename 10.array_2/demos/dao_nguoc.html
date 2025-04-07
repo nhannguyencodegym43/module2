@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+  let a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  let temp;
+  // tac dong truc tiep len mang cu
+  for (let i = 0; i < a.length/2; i++) { //Chạy tới nửa mảng vì sau khi các phần tử hoán đổi sẽ không cần lặp lại nữa
+    temp = a[i];
+    a[i] = a[a.length-1-i]; //Chỉ số a.length-1-i là chỉ số đối xứng với i, được áp dụng trong bài tính tổng đường chéo phụ
+    a[a.length-1-i] = temp;
+  }
+
+  //tao ra mang moi
+  let a_new=[];
+  for (let i = a.length-1; i >=0 ; i--) {
+    a_new.push(a[i]);
+  }
+  alert(a);
+  alert(a_new);
+</script>
+</body>
+</html>

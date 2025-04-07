@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max and average value</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let soNguyen = +prompt("Enter the number");
+        arr.push(soNguyen);
+    }
+    let max = arr[0];
+    let sum = 0;
+    let resultOfMax = `Max is ${max}`;
+    for (let i = 0; i < 10; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
+            resultOfMax = `Max is ${max}`;
+        }
+        sum += arr[i];
+    }
+    let avrg = sum / arr.length;
+    let resultOfAverage = `Average is ${avrg}`;
+    alert(resultOfMax);
+    alert(resultOfAverage);
+</script>
+</body>
+</html>

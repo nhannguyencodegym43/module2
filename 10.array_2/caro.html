@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Caro</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame" />
+<input type="button" value="Change Value" onclick="changeValue1()">
+<input type="button" value="Change Value" onclick="changeValue2()">
+<script>
+    let b = document.getElementById("carogame");
+
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array('(.)', '(.)', '(.)', '(.)', '(.)');
+    }
+
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+
+    data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>"
+    data += "<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>"
+    b.innerHTML = data;
+    function changeValue1() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "x";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>"
+        data += "<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>"
+        b.innerHTML = "<hr/>" + data;
+    }
+    function changeValue2() {
+        let positionA = prompt("A: ");
+        let positionB = prompt("B: ");
+        data = "";
+        board[positionA][positionB] = "o";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>"
+        data += "<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>"
+        b.innerHTML = "<hr/>" + data;
+    }
+</script>
+</body>
+</html>
