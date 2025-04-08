@@ -5,31 +5,69 @@
     <title>Products management app</title>
 </head>
 <body>
-<h3>Add new product</h3>
-<div>
-    <input type="text" size="30" placeholder="Enter name of new product">
-    <input type="submit" value="Add">
-</div>
-<h3>Display all products</h3>
-<div>
-    <h4></h4>
-    <table>
-        <tr>
-            <th><h4>Product Name</h4></th>
-        </tr>
-        <tr>
-            <th><h4></h4></th>
-        </tr>
-        <tr>
-            <td id="product1"></td>
-        </tr>
-    </table>
-</div>
+<input id="newProduct" type="text"><button onclick="addProduct()">Add Product</button>
+<h1>Danh sach san phan</h1>
+<table border="1px">
+    <tr>
+        <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    <tbody id="content">
+    <tr>
+        <td>Iphone 5</td>
+        <td><button>Update</button></td>
+        <td><button>Delete</button></td>
+    </tr>
+    <tr>
+        <td>Iphone 6</td>
+        <td><button>Update</button></td>
+        <td><button>Delete</button></td>
+    </tr>
+    </tbody>
+</table>
 <script>
-let productsList = [];
-function showProducts(){
+    // C: create
+    // R: read (danh sach, chi tiet, tim kiem, ...)
+    // U: update
+    // D: delete
 
-}
+    // danh sach
+    // mang de luu du lieu
+    let products = ["Iphone X", "Iphone 11 promax", "Macbook"]
+    function showAllProduct() {
+        let content = "";
+        for (let i = 0; i < products.length; i++) {
+            content += `<tr>
+            <td id="productName">${products[i]}</td>
+            <td><button onclick="updateProduct(${i})">Update</button></td>
+            <td><button onclick="removeProduct(${i})">Delete</button></td>
+        </tr>`
+        }
+        document.getElementById("content").innerHTML = content;
+    }
+    showAllProduct();
+    function addProduct() {
+//     lay du lieu tu input
+        let newP = document.getElementById("newProduct").value;
+//     them vao mang
+        products.push(newP);
+//     hien thi lai danh sach
+        showAllProduct();
+    }
+
+    function updateProduct(index) {
+        let newUpdates = prompt("Update the product");
+        products[index] = newUpdates;
+        showAllProduct();
+    }
+
+    function removeProduct(index) {
+        // xoa khoi mang theo index
+        products.splice(index, 1);
+//     hien thi lai danh sach
+        showAllProduct();
+    }
 </script>
 </body>
 </html>
