@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class of mobile phone</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor() {
+            this.battery = 100;
+            this.draft = "";
+            this.inboxes = [];
+            this.sent = [];
+        }
+        writeMessage(message) {
+            this.draft = message;
+            this.battery--;
+        }
+        sendMessage(mobile) {
+            let draft = this.draft;
+            mobile.inboxes.push(draft)
+            this.sent.push(draft);
+            this.draft="";
+        }
+    }
+</script>
+</body>
+</html>
