@@ -17,20 +17,18 @@ class Apple {
 let redApple = new Apple();
 let greenApple = new Apple();
 class Human {
-    constructor(name, gender, weight, apple) {
+    constructor(name, gender, weight) {
         this.name = name;
         this.gender = gender;
         this.weight = weight;
-        this.apple = apple;
     }
     isMale() {
         return this.gender === true;
     }
     eatApple(apple) {
-        if (this.apple && !this.apple.isEmpty()) {
-            this.apple.decrease();
+        if (apple && !apple.isEmpty()) {
+            apple.decrease();
             this.weight++;
-            this.apple = apple;
         }
     }
     say(message) {
@@ -49,5 +47,12 @@ class Human {
         this.weight = weight;
     }
 }
-let adam = new Human("Adam", true, 70, redApple);
-let eva = new Human("Eva", false, 50, greenApple);
+let adam = new Human("Adam", true, 70);
+let eva = new Human("Eva", false, 50);
+adam.eatApple(redApple);
+eva.eatApple(redApple);
+document.write(adam.getWeight());
+document.write("<br>");
+document.write(eva.getWeight());
+document.write("<br>");
+document.write(redApple.getWeight());

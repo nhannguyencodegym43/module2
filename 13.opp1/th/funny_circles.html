@@ -1,10 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Funny Circles</title>
+    <style>
+    </style>
 </head>
 <body>
-$END$
+<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas2"></canvas>
+<canvas id="myCanvas3"></canvas>
+<canvas id="myCanvas4"></canvas>
+<canvas id="myCanvas5"></canvas>
+<canvas id="myCanvas6"></canvas>
+<canvas id="myCanvas7"></canvas>
+<canvas id="myCanvas8"></canvas>
+<script>
+    let a = document.getElementById("myCanvas");
+    let atx = a.getContext("2d");
+    atx.beginPath();
+    atx.arc(50, 100, 50, 0, Math.PI*2, true);
+    atx.closePath();
+    atx.fillStyle = "red";
+    atx.fill();
+
+    let b = document.getElementById("myCanvas2");
+    let btx = b.getContext("2d");
+    btx.beginPath();
+    btx.arc(50, 100, 50, 0, Math.PI*2, true);
+    btx.closePath();
+    btx.fillStyle = "orange";
+    btx.fill();
+
+    let c = document.getElementById("myCanvas3");
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(50, 100, 50, 0, Math.PI*2, true);
+    ctx.closePath();
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+
+    let d = document.getElementById("myCanvas4");
+    let dtx = d.getContext("2d");
+    dtx.beginPath();
+    dtx.arc(50, 100, 50, 0, Math.PI*2, true);
+    dtx.closePath();
+    dtx.fillStyle = "green";
+    dtx.fill();
+
+    let e = document.getElementById("myCanvas5");
+    let etx = e.getContext("2d");
+    etx.beginPath();
+    etx.arc(50, 100, 50, 0, Math.PI*2, true);
+    etx.closePath();
+    etx.fillStyle = "blue";
+    etx.fill();
+
+    let f = document.getElementById("myCanvas6");
+    let ftx = f.getContext("2d");
+    ftx.beginPath();
+    ftx.arc(50, 100, 50, 0, Math.PI*2, true);
+    ftx.closePath();
+    ftx.fillStyle = "darkblue";
+    ftx.fill();
+
+    let g = document.getElementById("myCanvas7");
+    let gtx = g.getContext("2d");
+    gtx.beginPath();
+    gtx.arc(50, 100, 50, 0, Math.PI*2, true);
+    gtx.closePath();
+    gtx.fillStyle = "purple";
+    gtx.fill();
+
+    let h = document.getElementById("myCanvas8");
+    let htx = h.getContext("2d");
+    htx.beginPath();
+    htx.arc(50, 100, 50, 0, Math.PI*2, true);
+    const gradient = htx.createLinearGradient(0, 0, 0, 100);
+    gradient.addColorStop(0, "black");       // Màu ở tâm
+    gradient.addColorStop(1, "pink");    // Màu ngoài cùng
+    // Dùng gradient làm màu tô
+    htx.fillStyle = gradient;
+    htx.closePath();
+    htx.fill();
+</script>
 </body>
 </html>

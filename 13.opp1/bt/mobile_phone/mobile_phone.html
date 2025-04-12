@@ -5,25 +5,33 @@
     <title>Class of mobile phone</title>
 </head>
 <body>
-<script>
-    class Mobile {
-        constructor() {
-            this.battery = 100;
-            this.draft = "";
-            this.inboxes = [];
-            this.sent = [];
-        }
-        writeMessage(message) {
-            this.draft = message;
-            this.battery--;
-        }
-        sendMessage(mobile) {
-            let draft = this.draft;
-            mobile.inboxes.push(draft)
-            this.sent.push(draft);
-            this.draft="";
-        }
-    }
-</script>
+<table border="1px">
+    <tr>
+        <th>Mary</th>
+        <th>John</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" name="mary" id="mary">
+        </td>
+        <td>
+            <input type="text" name="john" id="john">
+        </td>
+    </tr>
+    <tr>
+        <td id="inboxMary">
+            inboxMary
+        </td>
+        <td id="inboxJohn">
+            inboxJohn
+        </td>
+    </tr>
+    <tr>
+        <td><button onclick="marySendJohn()">Send to John</button></td>
+        <td><button onclick="johnSendMary()">Send to Mary</button></td>
+    </tr>
+</table>
+<script src="class.js"></script>
+<script src="functions.js"></script>
 </body>
 </html>

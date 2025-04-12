@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Class of rectangle</title>
 </head>
 <body>
-$END$
+<script>
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.calculateArea = function() {
+            return this.width * this.height;
+        };
+    }
+</script>
 </body>
 </html>

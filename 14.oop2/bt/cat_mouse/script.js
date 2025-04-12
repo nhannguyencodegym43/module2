@@ -27,9 +27,11 @@ class Cat {
   }
     eatMouse(mouse) {
         if (mouse.status) {
-        return `${this.name} ate ${mouse.name}`;
-        } else {
-        return `${this.name} couldn't eat ${mouse.name}`;
+            this.weight = this.weight + mouse.weight;
+            mouse.weight = 0;
+            mouse.status = false;
         }
     }
 }
+let cat = new Cat("Tom", 10, 20);
+let mouse = new Mouse("Jerry", 5, 15, true);

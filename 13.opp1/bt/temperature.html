@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Class of Temperature</title>
 </head>
 <body>
-$END$
+<script>
+    class Temperature {
+        constructor(min, celsius) {
+            this.celsius = celsius;
+            this.min = -273;
+        }
+        checkCelsius() {
+            if (this.celsius < this.min) {
+                alert("Please enter the celsius again");
+            }
+        }
+        transferCelsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+        transferCelsiusToKelvin(celsius) {
+            return celsius + 273.15;
+        }
+    }
+    let temperature1 = new Temperature(-273, -274);
+    temperature1.checkCelsius();
+    alert(temperature1.transferCelsiusToFahrenheit(25));
+    alert(temperature1.transferCelsiusToKelvin(25));
+</script>
 </body>
 </html>

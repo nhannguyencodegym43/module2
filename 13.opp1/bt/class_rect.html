@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Class of rectangle</title>
 </head>
 <body>
-$END$
+<canvas id="myRectangle"></canvas>
+<script>
+    class Rect{
+        constructor(x, y, width, length){
+            this.width = width;
+            this.length = length;
+            this.x = x;
+            this.y = y;
+        }
+        setWidth(width){
+            this.width = width;
+        }
+        setLength(length){
+            this.length = length;
+        }
+        getPerimeter = function(){
+            return (this.width + this.length)*2;
+        }
+        getArea = function(){
+            return this.width * this.length;
+        }
+        getShape = function(){
+            let r = document.getElementById('myRectangle');
+            let rtx = r.getContext("2d");
+            rtx.fillStyle = "red";
+            rtx.fillRect(this.x, this.y, this.width, this.length);
+        }
+    }
+    let rect1 = new Rect(0, 0, 100, 200);
+    rect1.getShape();
+    rect1.setWidth(50);
+    rect1.setLength(100);
+    alert(rect1.getPerimeter());
+    alert(rect1.getArea());
+</script>
 </body>
 </html>
