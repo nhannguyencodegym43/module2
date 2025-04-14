@@ -5,41 +5,53 @@
     <title>Products management app</title>
 </head>
 <body>
-<input id="newProduct" type="text"><button onclick="addProduct()">Add Product</button>
+<input id="newId" type="text" placeholder="Id">
+<input id="newProduct" type="text" placeholder="Product">
+<input id="newPrice" type="text" placeholder="Price">
+<input id="newAmount" type="text" placeholder="Amount">
+<button onclick="addProduct()">Add Product</button>
 <h1>Danh sach san phan</h1>
 <table border="1px">
     <tr>
+        <th>Id</th>
         <th>Name</th>
+        <th>Price</th>
+        <th>Amount</th>
         <th>Update</th>
         <th>Delete</th>
     </tr>
     <tbody id="content">
     <tr>
+        <td>1</td>
         <td>Iphone 5</td>
+        <td>1000</td>
+        <td>1</td>
         <td><button>Update</button></td>
         <td><button>Delete</button></td>
     </tr>
     <tr>
+        <td>2</td>
         <td>Iphone 6</td>
+        <td>2000</td>
+        <td>2</td>
         <td><button>Update</button></td>
         <td><button>Delete</button></td>
     </tr>
     </tbody>
 </table>
 <script>
-    // C: create
-    // R: read (danh sach, chi tiet, tim kiem, ...)
-    // U: update
-    // D: delete
-
-    // danh sach
-    // mang de luu du lieu
+    let indexes = [1, 2, 3];
     let products = ["Iphone X", "Iphone 11 promax", "Macbook"]
+    let prices = [1000, 2000, 3000];
+    let amounts = [1, 2, 3];
     function showAllProduct() {
         let content = "";
         for (let i = 0; i < products.length; i++) {
             content += `<tr>
+            <td id="productId">${indexes[i]}</td>
             <td id="productName">${products[i]}</td>
+            <td id="productPrice">${prices[i]}</td>
+            <td id="productAmount">${amounts[i]}</td>
             <td><button onclick="updateProduct(${i})">Update</button></td>
             <td><button onclick="removeProduct(${i})">Delete</button></td>
         </tr>`
@@ -48,24 +60,34 @@
     }
     showAllProduct();
     function addProduct() {
-//     lay du lieu tu input
+        let newId = document.getElementById("newId").value;
+        indexes.push(newId);
         let newP = document.getElementById("newProduct").value;
-//     them vao mang
         products.push(newP);
-//     hien thi lai danh sach
+        let newPrice = document.getElementById("newPrice").value;
+        prices.push(newPrice);
+        let newAmount = document.getElementById("newAmount").value;
+        amounts.push(newAmount);
         showAllProduct();
     }
 
     function updateProduct(index) {
-        let newUpdates = prompt("Update the product");
-        products[index] = newUpdates;
+        let newUpdateId = prompt("Update the id");
+        indexes[index] = newUpdateId;
+        let newUpdateProduct = prompt("Update the product");
+        products[index] = newUpdateProduct;
+        let newUpdatePrice = prompt("Update the price");
+        prices[index] = newUpdatePrice;
+        let newUpdateAmount = prompt("Update the amount");
+        amounts[index] = newUpdateAmount;
         showAllProduct();
     }
 
     function removeProduct(index) {
-        // xoa khoi mang theo index
+        indexes.splice(index, 1);
         products.splice(index, 1);
-//     hien thi lai danh sach
+        prices.splice(index, 1);
+        amounts.splice(index, 1);
         showAllProduct();
     }
 </script>
