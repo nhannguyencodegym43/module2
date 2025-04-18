@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let student1 = {
+        name: 'Alice',
+        age: 25,
+        major: 'Math',
+    }
+    let student2 = {
+        name: 'Bob',
+        age: 25,
+        major: 'Physics',
+    }
+    let students = [student1, student2];
+    let newName = prompt('What is the name of the student?');
+    let newAge = prompt('What is the age of the student?');
+    let newMajor = prompt('What is the major of the student?');
+    let newStudent = {
+        name: newName,
+        age: newAge,
+        major: newMajor,
+    }
+    function addStudent(newStudent) {
+        students.push(newStudent);
+    }
+    addStudent(newStudent);
+    document.write(students.length);
+    console.log(students);
+</script>
+</body>
+</html>

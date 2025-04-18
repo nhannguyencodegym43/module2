@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getTotalX(a, b) {
+        // Write your code here
+        let countA = 0;
+        let countB = 0;
+        let countNumbers = 0;
+        for (let number = 1; number <= 100; number++) {
+            for (let i = 0; i < a.length; i++) {
+                if (number % a[i] === 0) {
+                    countA++;
+                }
+            }
+            for (let j = 0; j < b.length; j++) {
+                if (b[j] % number === 0) {
+                    countB++;
+                }
+            }
+            if (countA === a.length && countB === b.length) {
+                countNumbers++;
+            }
+            countA = 0;
+            countB = 0;
+        }
+        return countNumbers;
+    }
+    let a = [2, 4];
+    let b = [16, 32, 96];
+    alert(getTotalX(a, b));
+</script>
+</body>
+</html>

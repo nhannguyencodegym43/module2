@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Conversion</title>
+</head>
+<body>
+<script>
+    function timeConversion(s) {
+        // Write your code here
+        let newTime = s.split(":");
+        let format = s.slice(8, 10);
+        if (format === "AM") {
+            if (parseInt(newTime[0]) >= 12) {
+                newTime[0] = parseInt(newTime[0]) - 12;
+                newTime[0].toString();
+                newTime[0] = "0" + newTime[0];
+            }
+        }
+        if (format === "PM") {
+            if (parseInt(newTime[0]) < 12) {
+                newTime[0] = parseInt(newTime[0]) + 12;
+                newTime[0].toString();
+            }
+        }
+        newTime = newTime.join(":");
+        newTime = newTime.replace(format, "");
+        return newTime;
+    }
+    let yourTime = prompt("Enter your time here");
+    alert(timeConversion(yourTime));
+</script>
+</body>
+</html>

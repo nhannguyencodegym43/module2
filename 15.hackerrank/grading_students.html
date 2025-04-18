@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function gradingStudents(grades) {
+        // Write your code here
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] >= 38) {
+                let nextMultipleOf5 = Math.ceil(grades / 5) * 5;
+                if (nextMultipleOf5 - grades < 3) {
+                    grades = nextMultipleOf5;
+                }
+            }
+        }
+        return grades;
+    }
+    alert(gradingStudents(38));
+</script>
+</body>
+</html>

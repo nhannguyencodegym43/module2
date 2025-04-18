@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function breakingRecords(scores) {
+        let min = scores[0];
+        let max = scores[0];
+        let countMin = 0;
+        let countMax = 0;
+        let res = [];
+        for (let i = 1; i < scores.length; i++) {
+            if (scores[i] > max) {
+                max = scores[i];
+                countMax++;
+            }
+            if (scores[i] < min) {
+                min = scores[i];
+                countMin++;
+            }
+        }
+        res.push(countMax);
+        res.push(countMin);
+        return res;
+    }
+    let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+    breakingRecords(scores);
+</script>
+</body>
+</html>

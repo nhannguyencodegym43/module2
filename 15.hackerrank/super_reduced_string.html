@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function superReducedString(s) {
+        // Write your code here
+        let newString = '';
+        for (let i = 0; i < s.length; i++) {
+            if (s[i] === s[i+1]) {
+                newString = s.replace(/l/g, "");
+            }
+        }
+    }
+</script>
+</body>
+</html>

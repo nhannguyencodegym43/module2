@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kangaroo(x1, v1, x2, v2) {
+        // Write your code here
+        let res = "NO";
+        if (v1 < v2) {
+            res = "NO";
+        } else if ((x2 - x1) % (v1 - v2) === 0) {
+            res = "YES";
+        }
+        return res;
+    }
+    let x1 = +prompt("Enter x1");
+    let v1 = +prompt("Enter v1");
+    let x2 = +prompt("Enter x2");
+    let v2 = +prompt("Enter v2");
+    alert(kangaroo(x1, v1, x2, v2));
+</script>
+</body>
+</html>
