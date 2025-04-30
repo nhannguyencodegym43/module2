@@ -8,12 +8,15 @@
 <script>
     function superReducedString(s) {
         // Write your code here
-        let newString = '';
-        for (let i = 0; i < s.length; i++) {
-            if (s[i] === s[i+1]) {
-                newString = s.replace(/l/g, "");
+        let stack = [];
+        for (let char of s) {
+            if (stack.length && stack[stack.length - 1] === char) {
+                stack.pop();
+            } else {
+                stack.push(char);
             }
         }
+        return stack.length ? stack.join("") : "Empty String";
     }
 </script>
 </body>

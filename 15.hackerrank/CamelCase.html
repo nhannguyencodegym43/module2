@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = prompt("What is s");
+    alert(camelCase(s));
+    function camelCase(s) {
+        // Write your code here
+        let word = "";
+        let stack = [];
+        while (s.length > 0) {
+        for (let char of s) {
+            if (char === char.toLowerCase()) {
+                word += char;
+                s = s.slice(1);
+            } else if (char === char.toUpperCase()) {
+                break;
+            }
+        }
+        stack.push(word);
+        word = "";
+        for (let char of s) {
+            if (char === char.toUpperCase()) {
+                word += char;
+                s = s.slice(1);
+                break;
+            }
+        }
+        }
+        return stack.length;
+    }
+</script>
+</body>
+</html>
