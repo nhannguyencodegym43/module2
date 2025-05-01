@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temp;
+    let num = +prompt('Enter a number');
+    let newNum = [];
+    let count = 0;
+    let res = "NO";
+    if (num > 0) {
+        num = num.toString();
+        for (let i = 0; i < num.length; i++) {
+            newNum.push(num[i]);
+        }
+        for (let i = 0; i < Math.floor(newNum.length/2); i++) {
+            temp = newNum[i];
+            newNum[i] = newNum[newNum.length - 1 - i];
+            newNum[newNum.length - 1 - i] = temp;
+        }
+        for (let i = 0; i < newNum.length; i++) {
+            if (newNum[i] === num[i]) {
+                count++;
+            } else break;
+        }
+        if (count === newNum.length) {
+            res = "YES";
+        }
+    } else alert("Invalid number");
+    alert(res);
+</script>
+</body>
+</html>

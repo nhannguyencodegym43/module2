@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = Math.floor(Math.random() * 100) + 1;
+    let res = `You lose! The number is ${number}`;
+    for (let i = 1; i <= 7; i++) {
+        let yours = +prompt("Enter your number");
+        if (yours === number) {
+            res = "Correct!";
+            break;
+        } else if (yours < number) {
+            alert("Yours is less than the number");
+        } else if (yours > number) {
+            alert("Your number is greater than the number");
+        }
+    }
+    alert(res);
+</script>
+</body>
+</html>
