@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id, name, scores) {
+            this.id = id;
+            this.name = name;
+            this.scores = scores;
+        }
+        getAverageScore() {
+            let sum = 0;
+            for (let i = 0; i < this.scores.length; i++) {
+                sum += this.scores[i];
+            }
+            return (sum/this.scores.length).toFixed(2);
+        }
+        isPassed() {
+            return (this.getAverageScore() >= 5);
+        }
+    }
+    let listOfStudents = [
+        student1 = {id: 1, name: "John", scores: [6, 7, 8]},
+        student2 = {id: 2, name: "Mary", scores: [5, 6, 8]},
+        student3 = {id: 3, name: "Joseph", scores: [4, 3, 5]},
+    ];
+    let wantAdd = confirm("Do you want to add a student?");
+    if (wantAdd) {
+        let newName = prompt("Enter the name of the new student");
+        let newScore = [];
+        for (let i = 0; i < 3; i++) {
+            let new_each = +prompt("Enter the scores");
+            newScore.push(new_each);
+        }
+        let newStudent = {
+            id: listOfStudents[listOfStudents.length - 1].id + 1,
+            name: newName,
+            scores: newScore
+        }
+        listOfStudents.push(newStudent);
+    }
+    const students = listOfStudents.map((student) => new Student(student.id, student.name, student.scores));
+    let res = [];
+    for (let i = 0; i < listOfStudents.length; i++) {
+        let res_of_isPassed = `${students[i].name} has failed`;
+        if (students[i].isPassed()) {
+            res_of_isPassed = `${students[i].name} has passed`;
+        }
+        let res_each = `${res_of_isPassed} and the average score is ${students[i].getAverageScore()}`;
+        res.push(res_each);
+    }
+    for (let i = 0; i < res.length; i++) {
+        document.write(`${res[i]} <br>`);
+    }
+</script>
+</body>
+</html>

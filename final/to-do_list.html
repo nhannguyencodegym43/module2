@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Task {
+        constructor(id, content, completed) {
+            this.id = id;
+            this.content = content;
+            this.completed = completed;
+        }
+        toggleStatus() {
+            if (this.completed) {
+                this.completed = false;
+            } else {
+                this.completed = true;
+            }
+        }
+    }
+    let listOfTasks = [
+        {id: 1, content: "code", completed: true},
+        {id: 2, content: "interview", completed: false},
+        {id: 3, content: "theories", completed: false},
+    ]
+    let wantAdd = confirm("Do you want to add a task?");
+    if (wantAdd) {
+        let newContent = prompt("Enter the task content");
+        let newTask = {
+            id: listOfTasks[listOfTasks.length - 1].id + 1,
+            content: newContent,
+            completed: false
+        }
+        listOfTasks.push(newTask);
+    }
+
+    const tasks = listOfTasks.map(task => new Task(task.id, task.content, task.completed));
+
+    function showTasks() {
+        let tableOfTasks = [];
+        let showEach = "";
+        for (let i = 0; i < tasks.length; i++) {
+            let status = "[]";
+            if (tasks[i].completed) {
+                status = "[x]";
+            }
+            showEach = `Id: ${tasks[i].id} - Name: ${tasks[i].content} - Status: ${status}`;
+            tableOfTasks.push(showEach);
+        }
+        for (let i = 0; i < tableOfTasks.length; i++) {
+            document.write(`${tableOfTasks[i]} <br>`);
+        }
+    }
+    function changeStatus(id) {
+        for (let i = 0; i < tasks.length; i++) {
+            if (id === tasks[i].id) {
+                tasks[i].toggleStatus();
+                break;
+            }
+        }
+        showTasks();
+    }
+</script>
+</body>
+</html>

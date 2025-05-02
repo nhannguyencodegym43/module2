@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(n) {
+        let prime = true;
+        if (n === 2) {
+            prime = true;
+        }
+        if (n <= 1 || (n % 2 === 0 && n !== 2)) {
+            prime = false;
+        }
+        for (let i = 3; i <= Math.sqrt(n); i=i+2) {
+            if (n % i === 0) {
+                prime = false;
+            }
+        }
+        return prime;
+    }
+    function filterPrimes(arr) {
+        let newPrimesArray = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                newPrimesArray.push(arr[i]);
+            }
+        }
+        return newPrimesArray;
+    }
+    let arr = prompt("Enter the array of numbers, separated by , not including space");
+    let new_arr = arr.split(',').map(Number);
+    alert(filterPrimes(new_arr));
+</script>
+</body>
+</html>
