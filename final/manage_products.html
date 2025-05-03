@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Add new product</h1>
+<label for="add-name"></label>
+<input type="text" id="add-name" name="add-name" placeholder="Enter product name">
+<label for="add-price"></label>
+<input type="text" id="add-price" name="add-price" placeholder="Enter product price">
+<label for="add-amount"></label>
+<input type="text" id="add-amount" name="add-amount" placeholder="Enter product amount">
+<button onclick="addProduct()">Add</button>
+<h1>Display all products</h1>
+<table border="1px">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+</table>
+<script>
+    let id = [1, 2, 3];
+    let names = ["Iphone X", "Iphone 11", "Iphone 13"];
+    let prices = [1000, 2000, 3000];
+    let amounts = [1, 2, 3];
+    function showAllProducts(){
+        let content = "";
+        for (let i = 0; i < names.length; i++) {
+            content += `
+            <tr>
+            <td id="productId">${id[i]}</td>
+            <td id="productName">${names[i]}</td>
+            <td id="productPrice">${prices[i]}</td>
+            <td id="productAmount">${amounts[i]}</td>
+            <td><button onclick="updateProduct(${i})">Update</button></td>
+            <td><button onclick="deleteProduct(${i})">Delete</button></td>
+            </tr>
+            `
+        }
+        document.getElementById("table-body").innerHTML = content;
+    }
+    showAllProducts();
+    function addProduct() {
+        let newName = document.getElementById("add-name").value;
+        let newPrice = document.getElementById("add-price").value;
+        let newAmount = document.getElementById("add-amount").value;
+        id.push(id[id.length - 1] + 1);
+        names.push(newName);
+        prices.push(newPrice);
+        amounts.push(newAmount);
+        showAllProducts();
+    }
+    function updateProduct(index) {
+        let updateName = prompt("Enter new product name");
+        let updatePrice = +prompt("Enter new price");
+        let updateAmount = +prompt("Enter new amount");
+        names[index] = updateName;
+        prices[index] = updatePrice;
+        amounts[index] = updateAmount;
+        showAllProducts();
+    }
+    function deleteProduct(index) {
+        id.splice(index, 1);
+        names.splice(index, 1);
+        prices.splice(index, 1);
+        amounts.splice(index, 1);
+        showAllProducts();
+    }
+</script>
+</body>
+</html>

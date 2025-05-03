@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>20 số đầu tiên trong dãy Fibonacci là:</h1> <br>
+<script>
+    let fibonacci = [0, 1];
+    for (let i = 2; i < 20; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]);
+    }
+    document.write(fibonacci);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Do you love me?</h1> <br>
+<button>Yes</button>
+<button onmouseover="moveNo()" id="no-button" style="position: relative;">No</button>
+</body>
+<script>
+    let noButton = document.getElementById('no-button');
+    function moveNo() {
+        noButton.style.top = Math.floor(Math.random() * 1000) + 'px';
+        noButton.style.left = Math.floor(Math.random() * 1000) + 'px';
+        noButton.style.bottom = Math.floor(Math.random() * 1000) + 'px';
+        noButton.style.right = Math.floor(Math.random() * 1000) + 'px';
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="eng-to-vie">English to Vietnamese</label>
+<input type="text" id="eng-to-vie" name="eng-to-vie" placeholder="Enter a word">
+<button id="translate-button" onclick="translateWord()">Translate</button>
+<script>
+    const translateButton = document.getElementById('eng-to-vie');
+    translateButton.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            translateWord();
+        }
+    })
+    let eng = ["one", "two", "three"];
+    let vie = ["một", "hai", "ba"];
+    function translateWord() {
+        let eng_word = document.getElementById("eng-to-vie").value;
+        let vie_word = "";
+        for (let i = 0; i < eng.length; i++) {
+            if (eng[i] === eng_word) {
+                vie_word = vie[i];
+                break;
+            }
+        }
+        return alert(vie_word);
+    }
+</script>
+</body>
+</html>
