@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .calculator-container {
+      width: 350px;
+      height: 400px;
+      border: 1px solid #000;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+      margin: 50px 0;
+    }
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .plus, .subtract, .multiply, .divide, .reset, .equal {
+      width: 50px;
+      height: 30px;
+      border-radius: 3px;
+      border: 3px solid;
+      background-color: lightgray;
+      text-align: center;
+      align-content: center;
+    }
+    #input-space {
+      width: 300px;
+      height: 50px;
+      margin: 20px 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<div class="calculator-container">
+  <label for="input-space"></label>
+  <input id="input-space" type="text" disabled>
+  <div class="container">
+    <button class="one" id="one" value="1" onclick="add_one()">1</button>
+    <button class="two" id="two" value="2" onclick="add_two()">2</button>
+    <button class="three" id="three" value="3" onclick="add_three()">3</button>
+    <button class="plus" id="plus" value="+" onclick="add_plus()">+</button>
+    <button class="four" id="four" value="4" onclick="add_four()">4</button>
+    <button class="five" id="five" value="5" onclick="add_five()">5</button>
+    <button class="six" id="six" value="6" onclick="add_six()">6</button>
+    <button class="subtract" id="subtract" value="-" onclick="add_subtract()">-</button>
+    <button class="seven" id="seven" value="7" onclick="add_seven()">7</button>
+    <button class="eight" id="eight" value="8" onclick="add_eight()">8</button>
+    <button class="nine" id="nine" value="9" onclick="add_nine()">9</button>
+    <button class="multiply" id="multiply" value="*" onclick="add_multiply()">X</button>
+    <button class="reset" id="reset" value="C" onclick="add_reset()">C</button>
+    <button class="zero" id="zero" value="0" onclick="add_zero()">0</button>
+    <button class="equal" id="equal" value="=" onclick="add_equal()">=</button>
+    <button class="divide" id="divide" value="/" onclick="add_divide()">/</button>
+  </div>
+</div>
+<script>
+  let one = document.getElementById('one').value;
+  let two = document.getElementById('two').value;
+  let three = document.getElementById('three').value;
+  let four = document.getElementById('four').value;
+  let five = document.getElementById('five').value;
+  let six = document.getElementById('six').value;
+  let seven = document.getElementById('seven').value;
+  let eight = document.getElementById('eight').value;
+  let nine = document.getElementById('nine').value;
+  let zero = document.getElementById('zero').value;
+  let plus = document.getElementById('plus').value;
+  let multiply = document.getElementById('multiply').value;
+  let divide = document.getElementById('divide').value;
+  let equal = document.getElementById('equal').value;
+  let subtract = document.getElementById('subtract').value;
+  function add_one() {
+    document.getElementById('input-space').value += one;
+  }
+  function add_two() {
+    document.getElementById('input-space').value += two;
+  }
+  function add_three() {
+    document.getElementById('input-space').value += three;
+  }
+  function add_four() {
+    document.getElementById('input-space').value += four;
+  }
+  function add_five() {
+    document.getElementById('input-space').value += five;
+  }
+  function add_six() {
+    document.getElementById('input-space').value += six;
+  }
+  function add_seven() {
+    document.getElementById('input-space').value += seven;
+  }
+  function add_eight() {
+    document.getElementById('input-space').value += eight;
+  }
+  function add_nine() {
+    document.getElementById('input-space').value += nine;
+  }
+  function add_zero() {
+    document.getElementById('input-space').value += zero;
+  }
+  function add_multiply() {
+    document.getElementById('input-space').value += multiply;
+  }
+  function add_divide() {
+    document.getElementById('input-space').value += divide;
+  }
+  function add_reset() {
+    document.getElementById('input-space').value = '';
+  }
+  function add_equal() {
+    document.getElementById('input-space').value = eval(`${document.getElementById('input-space').value}`);
+  }
+  function add_plus() {
+    document.getElementById('input-space').value += plus;
+  }
+  function add_subtract() {
+    document.getElementById('input-space').value += subtract;
+  }
+</script>
+</body>
+</html>
