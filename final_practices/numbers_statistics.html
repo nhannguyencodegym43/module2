@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [0,1,2,3,4,5,6,7,8,9];
+    let user = 2342349;
+    let user_num = user.toString().split('').map(Number);
+    let count = 0;
+    let counts_each_num = {};
+    let total_counts = {};
+    function countNums () {
+        for (let i = 0; i < user_num.length; i++) {
+            for (let j = 0; j < numbers.length; j++) {
+                if (user_num[i] === numbers[i]) {
+                    count++;
+                }
+            }
+            counts_each_num = {
+                value: user_num[i],
+                times: count,
+            }
+            total_counts.push(counts_each_num);
+            counts_each_num = {};
+        }
+        for (let i = 0; i < total_counts.length; i++) {
+            document.write(total_counts[i] + '<br>');
+        }
+    }
+    countNums();
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let products_list = [
+        {id: 1, name: "red t-shirt", price: 1000, quantity: 1},
+        {id: 2, name: "jean", price: 2000, quantity: 2},
+        {id: 3, name: "snapback", price: 500, quantity: 3},
+    ]
+    let wantAdd = confirm("Do you want to add a new product?");
+    if (wantAdd) {
+        let newProduct = {
+            id: products_list[products_list.length - 1].id + 1,
+            name: prompt("Enter the name of the product"),
+            price: +prompt("Enter the price of the product"),
+            quantity: +prompt("Enter the quantity of the product"),
+        }
+        products_list.push(newProduct);
+    } else {
+        alert("It's okay!");
+    }
+    class Product {
+        constructor(id, name, price, quantity) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+    }
+    function getTotalOfEach() {
+        let res_each_product = "";
+        for (let i = 0; i < products.length; i++) {
+            res_each_product = `Name: ${products[i].name} has the total price is ${products[i].price * products[i].quantity} <br>`;
+            document.write(res_each_product);
+        }
+    }
+    function getTotalOfCart() {
+        let sum = 0;
+        for (let i = 0; i < products.length; i++) {
+            sum += products[i].price * products[i].quantity;
+        }
+        return document.write(`The total of the cart: ${sum} <br>`);
+    }
+    function showMaxTotal() {
+        let max = products[0].price * products[0].quantity;
+        let index = 0;
+        for (let i = 1; i < products.length; i++) {
+            if (products[i].price * products[i].quantity > max) {
+                max = products[i].price * products[i].quantity;
+                index = i;
+            }
+        }
+        return document.write(`The max total of all products is ${max} <br>`);
+    }
+    const products = products_list.map((product) => new Product(product.id, product.name, product.price, product.quantity));
+</script>
+</body>
+</html>
