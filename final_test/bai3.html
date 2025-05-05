@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage books</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Quản lý sách</h1>
+<table border="1px">
+    <thead>
+    <tr>
+        <th>Mã số sách</th>
+        <th>Tên sách</th>
+        <th>Năm xuất bản</th>
+        <th>Số quyển</th>
+        <th>Tình trạng</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+</table>
+<div class="btn-group">
+    <button>Thêm sách đã có</button>
+    <button onclick="addBook()">Thêm sách mới</button>
+    <button>Mượn sách</button>
+    <button>Hiển thị sách nhiều nhất</button>
+</div>
+<script>
+    let id = ["12345", "23456", "37456"];
+    let names = ["Toán", "Văn", "Tiếng Anh"];
+    let years = [2000, 1998, 1999];
+    let quantities = [3, 4, 5];
+    let status = [true, true, false];
+
+    function showAllBooks() {
+        let content = "";
+        for (let i = 0; i < names.length; i++) {
+            content += `
+            <tr>
+            <td id="bookId">${id[i]}</td>
+            <td id="bookName">${names[i]}</td>
+            <td id="bookYear">${years[i]}</td>
+            <td id="bookQuantity">${quantities[i]}</td>
+            <td id="bookStatus">${status[i] ? "Còn hàng" : "Hết hàng"}</td>
+            </tr>
+            `
+        }
+        document.getElementById("table-body").innerHTML = content;
+    }
+
+    showAllBooks();
+
+    function addBook() {
+        let newId = prompt("Nhập mã sách");
+        let newName = prompt("Nhập tên sách");
+        let newYear = +prompt("Nhập năm xuất bản");
+        let newQuantity = +prompt("Nhập số quyển");
+        let newStatus = confirm("Nhập tình trạng sách");
+        id.push(newId);
+        names.push(newName);
+        years.push(newYear);
+        quantities.push(newQuantity);
+        status.push(newStatus);
+        alert("Đã thêm sách thành công");
+        showAllBooks();
+    }
+
+    class Book {
+        constructor(id, name, year, quantity, status) {
+            this.id = id;
+            this.name = name;
+            this.year = year;
+            this.quantity = quantity;
+            this.status = status;
+        }
+
+        setId(id) {
+            let isValidOfLasts = true;
+            for (let i = 1; i <= id.length - 1; i++) {
+                if (Number(id[i]) >= 0 && Number(id[i]) <= 9) {
+                    isValidOfLasts = true;
+                } else {
+                    isValidOfLasts = false;
+                    break;
+                }
+            }
+            if (
+                (id.length === 5) &&
+                (Number(id[0]) >= 1 && Number(id[1]) <= 5) &&
+                (isValidOfLasts)
+            ) {
+                this._id = id;
+            } else {
+                alert("Mã sách không hợp lệ");
+            }
+        }
+
+        getId() {
+            return this._id;
+        }
+
+        setYear(year) {
+            if (year.toString().length === 4) {
+                this._year = year;
+            } else {
+                alert("Năm không hợp lệ");
+            }
+        }
+
+        getYear() {
+            return this._year;
+        }
+    }
+</script>
+</body>
+</html>

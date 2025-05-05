@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số phần tử của mảng và số phần tử của mảng phải dương và nhỏ hơn hoặc bằng 50");
+    if (n > 0 && n <= 50) {
+        let arr = [];
+        let arrOdd = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt(`Nhập phần tử thứ ${i + 1}`);
+            if (arr[i] % 2 !== 0 && i % 2 === 0) {
+                arrOdd.push(arr[i]);
+            }
+        }
+        let sum = 0;
+        for (let i = 0; i < arrOdd.length; i++) {
+            sum += arrOdd[i];
+        }
+        if (arrOdd.length > 0) {
+            let avg = sum / arrOdd.length;
+            document.write("Trung bình của các số lẻ ở vị trí chẵn là: " + avg);
+        } else {
+            document.write("Không có số lẻ nào ở vị trí chẵn");
+        }
+    } else {
+        alert("Số phần tử của mảng không được lớn hơn 50");
+    }
+</script>
+</body>
+</html>
