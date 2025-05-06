@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Tổng các phần tử
+    let arr =[
+        [1, 2, 3],
+        [3, 4, 5],
+        [4, 5, 6],
+    ]
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[0].length; j++) {
+            sum += arr[i][j];
+        }
+    }
+    document.write(sum + "<br>");
+
+    // Tổng các ô trên cùng 1 hàng
+    let sum_row = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[0].length; j++) {
+            sum_row += arr[i][j];
+        }
+        document.write(`Tổng của hàng ${i + 1} là ${sum_row} <br>`);
+        sum_row = 0;
+    }
+
+    // Tổng các ô trên cùng 1 cột
+    let sum_col = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[0].length; j++) {
+            sum_col += arr[j][i];
+        }
+        document.write(`Tổng của cột ${i + 1} là ${sum_col} <br>`);
+        sum_col = 0;
+    }
+</script>
+</body>
+</html>

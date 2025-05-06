@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="circle" onmouseover="moveCircle()" onmousemove="moveCircle()"></canvas>
+<script>
+    const canvas = document.getElementById("circle");
+    let circle = canvas.getContext("2d");
+    circle.beginPath();
+    circle.arc(95,50,40,0,2*Math.PI);
+    circle.stroke();
+
+    function moveCircle() {
+        canvas.style.position = "relative";
+        canvas.style.top = `${Math.floor(Math.random() * 1000)}px`;
+        canvas.style.left = `${Math.floor(Math.random() * 1000)}px`;
+    }
+</script>
+</body>
+</html>

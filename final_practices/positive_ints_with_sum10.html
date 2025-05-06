@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums = [-4, 3, 7, 6, 4, 5, 6, 5, -9];
+    let positive_nums = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+            positive_nums.push(nums[i]);
+        }
+    }
+    let target_num;
+    for (let i = 0; i < positive_nums.length; i++) {
+        target_num = positive_nums[i];
+        for (let j = i + 1; j < nums.length; j++) {
+            if (target_num + positive_nums[j] === 10) {
+                document.write(`Cặp số: ${target_num} và ${positive_nums[j]} <br>`)
+            }
+        }
+    }
+</script>
+</body>
+</html>
