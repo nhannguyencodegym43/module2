@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = [4];
+    let d = 4;
+    let m = 1;
+    function birthday(s, d, m) {
+        let count = 0;
+        let currentSum = 0;
+        for (let i = 0; i < m; i++) {
+            currentSum += s[i];
+        }
+        if (currentSum === d) count++;
+        for (let i = m; i < s.length; i++) {
+            currentSum = currentSum - s[i - m] + s[i];
+            if (currentSum === d) count++;
+        }
+        return count;
+    }
+    alert(birthday(s, d, m));
+</script>
+</body>
+</html>
